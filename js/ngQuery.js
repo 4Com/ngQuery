@@ -1,6 +1,6 @@
 (function() {
   'use strict';
 
-  angular.module("nqQuery", []);
+  angular.module("ngQuery", []);
 
 })();
