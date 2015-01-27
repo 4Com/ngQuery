@@ -36,7 +36,7 @@
           }]
         }, {
           identifier: "NoHandsets",
-          name: "Number of Handsets",
+          display: "Number of Handsets",
           type: "number",
           validOperators: [{
             identifier: "equals",

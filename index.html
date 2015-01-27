@@ -2,11 +2,14 @@
 <html ng-app="ngQuery">
   <head>
     <title>ngQuery</title>
+    <link rel="stylesheet" href="styles\css\application.css" />
     <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css" />
   </head>
   <body>
 
-    <query-builder></query-builder>
+    <div class="container">
+      <query-builder></query-builder>
+    </div>
 
     <script src="bower_components\jquery\dist\jquery.js"></script>
     <script src="bower_components\bootstrap\dist\js\bootstrap.js"></script>
@@ -16,5 +19,6 @@
     <script src="js\factories\queryOptionsFactory.js"></script>
     <script src="js\ngQueryConfig.js"></script>
     <script src="js\directives\queryBuilderDirective.js"></script>
+    <script src="js\controllers\queryBuilderController.js"></script>
   </body>
 </html>

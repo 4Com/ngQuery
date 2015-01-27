@@ -1,3 +1,36 @@
-<div>
-  {{ queryOptions.topLevelOperators[0].name }}
+<div class="panel panel-default query-container">
+  <div class="panel-body">
+    <div class="btn-group group-conditions" role="group">
+      <label ng-repeat="op in ctrl.queryOptions.topLevelOperators"
+             class="btn btn-xs btn-primary toggle-button"
+             ng-class="{'active': ctrl.selectedTopLevelOperator == op.name }">
+        <input name="{{op.name}}_cond" type="radio" value="{{op.name}}"
+               ng-click="ctrl.setTopLevelOperator(op.name)">
+                {{ op.name }}
+        </input>
+      </label>
+    </div>
+
+    <div class="btn-group pull-right group-actions">
+      <button type="button" class="btn btn-success btn-xs">
+        <i class="glyphicon glyphicon-plus"></i>
+        Add Rule
+      </button>
+      <button type="button" class="btn btn-success btn-xs">
+        <i class="glyphicon glyphicon-log-in"></i>
+        Add Group
+      </button>
+    </div>
+
+    <div class="rules-container">
+      <form class="form-inline">
+        <select ng-model="ctrl.selectedField" class="form-control input-sm" ng-change="ctrl.setAvailableOperators()"
+                ng-options="field.identifier as field.display for field in ctrl.queryOptions.fields">
+        </select>
+        <select ng-model="ctrl.selectedOperator" class="form-control input-sm"
+                ng-options="op.identifier as op.display for op in ctrl.availableOperators">
+        </select>
+      </form>
+    </div>
+  </div>
 </div>
