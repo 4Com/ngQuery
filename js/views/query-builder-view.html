@@ -22,9 +22,9 @@
       </button>
     </div>
 
-
-      <rule query-options="ctrl.queryOptions"></rule>
-      <rule query-options="ctrl.queryOptions"></rule>
-
+      <div ng-repeat="rule in ctrl.rules">
+        <rule query-options="ctrl.queryOptions" ng-model="rule"
+              ng-change=ctrl.ruleChange></rule>
+      </div>
   </div>
 </div>

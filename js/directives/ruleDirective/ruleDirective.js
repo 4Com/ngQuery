@@ -9,7 +9,9 @@
       restrict: "EA",
       templateUrl: "js/directives/ruleDirective/rule-view.html",
       scope: {
-        queryOptions: "="
+        queryOptions: "=",
+        ngModel: "=",
+        ngChange: "&"
       },
       controller: "ruleDirectiveController as ctrl"
     };
