@@ -8,7 +8,7 @@
     return {
       restrict: "E",
       templateUrl: "js/views/query-builder-view.html",
-      scope: true,
+      scope: {},
       controller: "queryBuilder as ctrl"
     };
   }

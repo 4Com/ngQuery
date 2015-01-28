@@ -22,15 +22,9 @@
       </button>
     </div>
 
-    <div class="rules-container">
-      <form class="form-inline">
-        <select ng-model="ctrl.selectedField" class="form-control input-sm" ng-change="ctrl.setAvailableOperators()"
-                ng-options="field.identifier as field.display for field in ctrl.queryOptions.fields">
-        </select>
-        <select ng-model="ctrl.selectedOperator" class="form-control input-sm"
-                ng-options="op.identifier as op.display for op in ctrl.availableOperators">
-        </select>
-      </form>
-    </div>
+
+      <rule query-options="ctrl.queryOptions"></rule>
+      <rule query-options="ctrl.queryOptions"></rule>
+
   </div>
 </div>

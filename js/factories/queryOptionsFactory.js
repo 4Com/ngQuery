@@ -47,6 +47,14 @@
           }, {
             identifier: "greaterthan",
             display: ">"
+          }],
+          validEntries: [{
+            identifier: 1,
+            display: "1"
+          },
+          {
+            identifier: 2,
+            display: "2"
           }]
         }]
       };
