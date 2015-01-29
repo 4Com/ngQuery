@@ -14,10 +14,7 @@
         isNested: "=",
         onRemove: "&"
       },
-      controller: "ruleGroupDirectiveController as ctrl",
-      link: function(scope, element, attrs) {
-
-      }
+      controller: "ruleGroupDirectiveController as ctrl"
     };
   }
 })();

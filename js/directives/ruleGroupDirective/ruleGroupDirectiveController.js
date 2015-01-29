@@ -34,9 +34,6 @@
     };
 
     vm.removeGroup = function(group) {
-      console.log(group);
-      console.log(vm.rules);
-
       if(group) {
         var index = vm.rules.indexOf(group);
         vm.rules.splice(index, 1);

@@ -20,7 +20,7 @@
       for(var i=0; i<vm.queryOptions.fields.length; i++) {
         var field = vm.queryOptions.fields[i];
 
-        if (field.identifier == vm.model.selectedField) {
+        if (field.identifier === vm.model.selectedField) {
           vm.availableOperators = field.validOperators;
           vm.validEntries = field.validEntries || null;
           break;

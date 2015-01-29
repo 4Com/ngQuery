@@ -16,7 +16,7 @@
         onRemove: "&"
       },
       controller: "ruleDirectiveController as ctrl",
-      link: function(scope, element, attrs) {
+      link: function(scope, element) {
         if(angular.isArray(scope.ctrl.model)) {
           element.html("<rule-group class='nested-group' query-options='ctrl.queryOptions' rules='ctrl.model' on-remove='ctrl.onRemove()' is-nested='true'></rule-group>");
           $compile(element.contents())(scope);

@@ -30,12 +30,7 @@
 
       var modalInstance = $modal.open({
         templateUrl: "js/widgets/saveModal/save-modal.html",
-        controller: 'saveModal',
-        resolve: {
-          items: function () {
-            return vm.items;
-          }
-        }
+        controller: 'saveModal as ctrl'
       });
 
       modalInstance.result.then(function (name) {

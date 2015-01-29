@@ -2,16 +2,23 @@
   "use strict";
 
   angular.module('ngQuery')
-         .controller('saveModal', function ($scope, $modalInstance, items) {
+         .controller('saveModal', saveModalController);
 
-    $scope.queryName = new Date();
+  saveModalController.$inject = [ "$modalInstance" ];
 
-    $scope.ok = function () {
-      $modalInstance.close($scope.queryName);
+  function saveModalController($modalInstance) {
+    /* jshint validthis: true */
+    var vm = this;
+
+    vm.queryName = new Date();
+
+    vm.save = function () {
+      $modalInstance.close(vm.queryName);
     };
 
-    $scope.cancel = function () {
+    vm.cancel = function () {
       $modalInstance.dismiss('cancel');
     };
-  });
+  }
+
 })();
