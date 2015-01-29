@@ -21,6 +21,11 @@
         <i class="glyphicon glyphicon-log-in"></i>
         Add Group
       </button>
+      <button type="button" class="btn btn-danger btn-xs" ng-click="ctrl.onRemove()"
+              ng-show="ctrl.isNested">
+        <i class="glyphicon glyphicon-trash"></i>
+        Remove Group
+      </button>
     </div>
 
     <div class="rules-container">

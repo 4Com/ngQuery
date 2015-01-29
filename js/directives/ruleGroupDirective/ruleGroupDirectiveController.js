@@ -11,6 +11,8 @@
 
     vm.queryOptions = $scope.queryOptions;
     vm.rules = $scope.rules;
+    vm.onRemove = $scope.onRemove;
+    vm.isNested = $scope.isNested;
 
     vm.selectedTopLevelOperator = vm.queryOptions.topLevelOperators[0].name;
 
@@ -29,6 +31,16 @@
 
     vm.addGroup = function() {
       vm.rules.push([{}]);
+    };
+
+    vm.removeGroup = function(group) {
+      console.log(group);
+      console.log(vm.rules);
+
+      if(group) {
+        var index = vm.rules.indexOf(group);
+        vm.rules.splice(index, 1);
+      }
     };
   }
 

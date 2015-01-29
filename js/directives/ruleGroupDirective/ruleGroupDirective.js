@@ -10,7 +10,9 @@
       templateUrl: "js/directives/ruleGroupDirective/rule-group-view.html",
       scope: {
         queryOptions: "=",
-        rules: "="
+        rules: "=",
+        isNested: "=",
+        onRemove: "&"
       },
       controller: "ruleGroupDirectiveController as ctrl"
     };
