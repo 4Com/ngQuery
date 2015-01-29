@@ -1,11 +1,11 @@
 $query-background: #FFF3C9;
 $container-border: #FFDA5C;
 $container-background: #FFFFFF;
+$saved-query-background: #FFFFFF;
+$saved-query-header: #1D2EB2;
 
 .query-container {
-  display:inline-block !important;
   margin: 10px 0px 0px 0px; /* TODO: Let the consumer do this */
-  width: 860px;
 
   .panel-body{
     background-color: $query-background;
@@ -39,5 +39,9 @@ $container-background: #FFFFFF;
 
   .nested-group .panel{
     margin: 0px 0px 0px 20px
+  }
+
+  .saved-query {
+    margin: 0px 0px 5px 0px;
   }
 }

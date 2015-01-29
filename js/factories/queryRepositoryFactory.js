@@ -6,7 +6,8 @@
 
   function queryRepository() {
     var service = {
-      getQuery: getQuery
+      getQueries: getQueries,
+      storeQuery: storeQuery
     };
 
     return service;
@@ -14,31 +15,17 @@
 
   // ***********************************************//
 
-  function getQuery() {
-    // TODO: This is just a holding area. This will need to
-    //       be able to handle many stored queries.
+  var queries = [];
 
-    return [
-    {
-      selectEntry: 1,
-      selectedField: "NoHandsets",
-      selectedOperator: "equals"
-    }, {
-      selectEntry: "Stuart%",
-      selectedField: "CFirstName",
-      selectedOperator: "like"
-    },
-    [
-      {
-        selectEntry: 1,
-        selectedField: "NoHandsets",
-        selectedOperator: "equals"
-      }, {
-        selectEntry: "Stuart%",
-        selectedField: "CFirstName",
-        selectedOperator: "like"
-      }
-    ]];
+  function getQueries() {
+    return queries;
+  }
+
+  function storeQuery(name, query) {
+    queries.push({
+      name: name,
+      query: query
+    });
   }
 
 })();

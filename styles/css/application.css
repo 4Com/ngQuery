@@ -1,8 +1,6 @@
 .query-container {
-  display: inline-block !important;
   margin: 10px 0px 0px 0px;
-  /* TODO: Let the consumer do this */
-  width: 860px; }
+  /* TODO: Let the consumer do this */ }
   .query-container .panel-body {
     background-color: #FFF3C9; }
   .query-container .toggle-button input[name$="_cond"] {
@@ -23,5 +21,7 @@
       width: 180px; }
   .query-container .nested-group .panel {
     margin: 0px 0px 0px 20px; }
+  .query-container .saved-query {
+    margin: 0px 0px 5px 0px; }
 
 /*# sourceMappingURL=application.css.map */

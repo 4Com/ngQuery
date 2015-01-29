@@ -10,8 +10,21 @@
     var vm = this;
 
     vm.queryOptions = queryOptions.getOptions();
+    vm.groups = [];
+    vm.savedQueries = queryRepository.getQueries();
 
-    vm.groups = queryRepository.getQuery();
+    vm.clearQuery = function() {
+      vm.groups.length = 0;
+    };
+
+    vm.saveQuery = function() {
+      queryRepository.storeQuery(new Date(), angular.copy(vm.groups));
+    };
+
+    vm.restoreQuery = function(query) {
+      vm.groups.length = 0;
+      angular.copy(query, vm.groups);
+    };
   }
 
 })();
