@@ -18,7 +18,7 @@
     // TODO: This is just a holding area. This will need to
     //       be able to handle many stored queries.
 
-    return [[
+    return [
     {
       selectEntry: 1,
       selectedField: "NoHandsets",
@@ -27,7 +27,18 @@
       selectEntry: "Stuart%",
       selectedField: "CFirstName",
       selectedOperator: "like"
-    }]];
+    },
+    [
+      {
+        selectEntry: 1,
+        selectedField: "NoHandsets",
+        selectedOperator: "equals"
+      }, {
+        selectEntry: "Stuart%",
+        selectedField: "CFirstName",
+        selectedOperator: "like"
+      }
+    ]];
   }
 
 })();

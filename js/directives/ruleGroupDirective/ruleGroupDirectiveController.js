@@ -26,6 +26,10 @@
       var index = vm.rules.indexOf(rule);
       vm.rules.splice(index, 1);
     };
+
+    vm.addGroup = function() {
+      vm.rules.push([{}]);
+    };
   }
 
 })();

@@ -29,6 +29,7 @@
     };
 
     vm.setAvailableOperators();
+    vm.isArray = angular.isArray;
   }
 
 })();

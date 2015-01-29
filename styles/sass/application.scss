@@ -19,6 +19,10 @@ $container-background: #FFFFFF;
     margin: 15px 0px 0px 0px;
   }
 
+  .rule-group-container {
+    margin: 0px 0px 5px 0px;
+  }
+
   .rule-container {
     margin: 0px 0px 6px 20px;
     border-style: solid;
@@ -31,5 +35,9 @@ $container-background: #FFFFFF;
     input[type="text"] {
       width: 180px;
     }
+  }
+
+  .nested-group .panel{
+    margin: 0px 0px 0px 20px
   }
 }
