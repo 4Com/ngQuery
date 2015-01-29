@@ -4,9 +4,9 @@
   angular.module("ngQuery")
          .controller("queryBuilder", QueryBuilderController);
 
-  QueryBuilderController.$inject = ["queryOptions", "queryRepository"];
+  QueryBuilderController.$inject = ["queryOptions", "queryRepository", "$modal"];
 
-  function QueryBuilderController(queryOptions, queryRepository) {
+  function QueryBuilderController(queryOptions, queryRepository, $modal) {
     var vm = this;
 
     vm.queryOptions = queryOptions.getOptions();
@@ -18,13 +18,32 @@
     };
 
     vm.saveQuery = function() {
-      queryRepository.storeQuery(new Date(), angular.copy(vm.groups));
+      openSaveModal();
     };
 
     vm.restoreQuery = function(query) {
       vm.groups.length = 0;
       angular.copy(query, vm.groups);
     };
+
+    function openSaveModal () {
+
+      var modalInstance = $modal.open({
+        templateUrl: "js/widgets/saveModal/save-modal.html",
+        controller: 'saveModal',
+        resolve: {
+          items: function () {
+            return vm.items;
+          }
+        }
+      });
+
+      modalInstance.result.then(function (name) {
+        queryRepository.storeQuery(name, angular.copy(vm.groups));
+      }, function () {
+
+      });
+    }
   }
 
 })();
