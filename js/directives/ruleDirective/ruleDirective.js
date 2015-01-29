@@ -10,8 +10,8 @@
       templateUrl: "js/directives/ruleDirective/rule-view.html",
       scope: {
         queryOptions: "=",
-        ngModel: "=",
-        ngChange: "&"
+        queryData: "=",
+        onRemove: "&"
       },
       controller: "ruleDirectiveController as ctrl"
     };

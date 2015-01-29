@@ -10,7 +10,8 @@
     var vm = this;
 
     vm.queryOptions = $scope.queryOptions;
-    vm.model = $scope.ngModel;
+    vm.model = $scope.queryData;
+    vm.onRemove = $scope.onRemove;
 
     vm.availableOperators = [];
     vm.validEntries = null;

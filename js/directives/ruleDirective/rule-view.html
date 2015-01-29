@@ -16,7 +16,7 @@
           ng-options="entry.identifier as entry.display for entry in ctrl.validEntries">
   </select>
 
-  <button type="button" class="btn btn-danger btn-sm pull-right">
+  <button type="button" class="btn btn-danger btn-sm pull-right" ng-click="ctrl.onRemove()">
     <i class="glyphicon glyphicon-trash"></i>
     Delete
   </button>
