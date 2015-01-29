@@ -1,0 +1,26 @@
+.query-container .rules-container > * {
+  position: relative; }
+.query-container .rules-container > *:before,
+.query-container .rules-container > *:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  width: 15px;
+  height: calc(50% + 4px);
+  border-color: #ccc;
+  border-style: solid; }
+.query-container .rules-container > *:before {
+  top: -2px;
+  border-width: 0 0 2px 2px; }
+.query-container .rules-container > *:after {
+  top: 50%;
+  border-width: 0 0 0 2px; }
+.query-container .rules-container > *:first-child:before {
+  top: -14px;
+  height: calc(50% + 14px); }
+.query-container .rules-container > *:last-child:before {
+  border-radius: 0 0 0 4px; }
+.query-container .rules-container > *:last-child:after {
+  display: none; }
+
+/*# sourceMappingURL=rule-connector.css.map */

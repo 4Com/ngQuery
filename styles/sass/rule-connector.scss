@@ -1,0 +1,33 @@
+.query-container {
+  .rules-container>* {
+    position:relative;
+  }
+  .rules-container>*:before,
+  .rules-container>*:after {
+    content:'';
+    position:absolute;
+    left: 5px;
+    width:15px;
+    height:calc(50% + 4px);
+    border-color:#ccc;
+    border-style:solid;
+  }
+  .rules-container>*:before {
+    top:-2px;
+    border-width:0 0 2px 2px;
+  }
+  .rules-container>*:after {
+    top:50%;
+    border-width:0 0 0 2px;
+  }
+  .rules-container>*:first-child:before {
+    top:-14px;
+    height:calc(50% + 14px);
+  }
+  .rules-container>*:last-child:before {
+    border-radius:0 0 0 4px;
+  }
+  .rules-container>*:last-child:after {
+    display:none;
+  }
+}
