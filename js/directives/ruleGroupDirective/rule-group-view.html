@@ -28,10 +28,10 @@
       </button>
     </div>
 
-    <div class="rules-container">
+    <div class="rules-container" ui-sortable ng-model="ctrl.rules">
       <div ng-repeat="rule in ctrl.rules">
         <rule query-options="ctrl.queryOptions" query-data="rule"
-              on-remove="ctrl.removeRule(rule)"></rule>
+              on-remove="ctrl.removeRule(rule)" class="draggable sortable"></rule>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 (function() {
   'use strict';
 
-  angular.module("ngQuery", []);
+  angular.module("ngQuery", ["ui.sortable"]);
 
 })();
