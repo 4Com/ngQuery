@@ -1,0 +1,28 @@
+{
+  "name": "ngQuery",
+  "version": "0.0.1",
+  "description": "Component to build queries in angular.",
+  "main": "../js/ngQuery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.10.1.51:7990/scm/it/ngquery.git"
+  },
+  "keywords": [
+    "Query",
+    "Angular"
+  ],
+  "author": "Ben Gale <ben.gale@4com.co.uk>",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-size": "^1.2.1",
+    "gulp-uglify": "^1.2.0",
+    "require-dir": "^0.3.0"
+  }
+}

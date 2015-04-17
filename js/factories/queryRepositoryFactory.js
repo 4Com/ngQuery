@@ -1,8 +1,8 @@
-(function() {
+(function () {
   "use strict";
 
   angular.module("ngQuery")
-         .factory("queryRepository", queryRepository);
+    .factory("queryRepository", queryRepository);
 
   function queryRepository() {
     var service = {

@@ -1,8 +1,8 @@
-(function() {
+(function () {
   'use strict';
 
   angular.module("ngQuery")
-         .factory("queryOptions", queryOptionsFactory);
+    .factory("queryOptions", queryOptionsFactory);
 
   function queryOptionsFactory() {
     var service = {
@@ -49,12 +49,12 @@
             display: ">"
           }],
           validEntries: [{
-            identifier: 1,
-            display: "1"
+              identifier: 1,
+              display: "1"
           },
-          {
-            identifier: 2,
-            display: "2"
+            {
+              identifier: 2,
+              display: "2"
           }]
         }]
       };

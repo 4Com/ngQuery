@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="ngQuery">
-  <head>
-    <title>ngQuery</title>
-    <link rel="stylesheet" href="styles\css\application.css" />
-    <link rel="stylesheet" href="styles\css\rule-connector.css" />
-    <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css" />
-  </head>
-  <body>
-    <div class="container query-container">
-      <query-builder></query-builder>
-    </div>
 
-    <script src="bower_components\jquery\dist\jquery.js"></script>
-    <script src="bower_components\jquery-ui\jquery-ui.js"></script>
-    <script src="bower_components\bootstrap\dist\js\bootstrap.js"></script>
-    <script src="bower_components\angular\angular.js"></script>
-    <script src="bower_components\angular-ui-sortable\sortable.js"></script>
-    <script src="bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js"></script>
+<head>
+  <title>ngQuery</title>
+  <link rel="stylesheet" href="dist\ngQuery.css" />
+  <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css" />
+</head>
 
-    <script src="js\ngQuery.js"></script>
-    <script src="js\factories\queryOptionsFactory.js"></script>
-    <script src="js\ngQueryConfig.js"></script>
-    <script src="js\directives\queryBuilderDirective.js"></script>
-    <script src="js\controllers\queryBuilderController.js"></script>
-    <script src="js\directives\ruleDirective\ruleDirective.js"></script>
-    <script src="js\directives\ruleDirective\ruleDirectiveController.js"></script>
-    <script src="js\directives\ruleGroupDirective\ruleGroupDirectiveController.js"></script>
-    <script src="js\directives\ruleGroupDirective\ruleGroupDirective.js"></script>
-    <script src="js\factories\queryRepositoryFactory.js"></script>
-    <script src="js\widgets\saveModal\saveModalController.js"></script>
-  </body>
+<body>
+  <div class="container query-container">
+    <query-builder></query-builder>
+  </div>
+
+  <script src="bower_components\jquery\dist\jquery.js"></script>
+  <script src="bower_components\jquery-ui\jquery-ui.js"></script>
+  <script src="bower_components\bootstrap\dist\js\bootstrap.js"></script>
+  <script src="bower_components\angular\angular.js"></script>
+  <script src="bower_components\angular-ui-sortable\sortable.js"></script>
+  <script src="bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js"></script>
+
+  <script src="dist\ngQuery.min.js"></script>
+</body>
+
 </html>
