@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://10.10.1.51:7990/scm/it/ngquery.git"
+    "url": "https://github.com/4Com/ngQuery.git"
   },
   "keywords": [
     "Query",
