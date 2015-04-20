@@ -12,7 +12,5 @@ var gulp = require('gulp');
 require('require-dir')('./gulp');
 
 gulp.task('default', [], function () {
-  gulp.start('bundle');
-  gulp.start('uglify');
-  gulp.start('minify-css');
+  gulp.run("dist");
 });

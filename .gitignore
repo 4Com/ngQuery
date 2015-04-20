@@ -22,3 +22,4 @@ dist/
 build/
 app/bundle.js
 app/vendor.js
+/.sass-cache/

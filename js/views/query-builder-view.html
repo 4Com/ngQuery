@@ -7,7 +7,7 @@
     <button type="button" class="btn btn-primary" ng-click="ctrl.saveQuery()"
             ng-disabled="ctrl.groups.length == 0">Save Query</button>
     <button type="button" class="btn btn-success"
-            ng-disabled="ctrl.groups.length == 0">Exectute Query</button>
+            ng-disabled="ctrl.groups.length == 0" ng-click="onExecute({data: ctrl.groups})">Exectute Query</button>
   </div>
 </div>
 <div class="col-sm-3">

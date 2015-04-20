@@ -1,8 +1,8 @@
-(function() {
+(function () {
   "use strict";
 
   angular.module("ngQuery")
-         .controller("queryBuilder", QueryBuilderController);
+    .controller("queryBuilder", QueryBuilderController);
 
   QueryBuilderController.$inject = ["queryOptions", "queryRepository", "$modal"];
 
@@ -13,32 +13,23 @@
     vm.groups = [];
     vm.savedQueries = queryRepository.getQueries();
 
-    vm.clearQuery = function() {
+    vm.clearQuery = function () {
       vm.groups.length = 0;
     };
 
-    vm.saveQuery = function() {
+    vm.saveQuery = function () {
       openSaveModal();
     };
 
-    vm.restoreQuery = function(query) {
+    vm.restoreQuery = function (query) {
       vm.groups.length = 0;
       angular.copy(query, vm.groups);
     };
 
-    function openSaveModal () {
+    function openSaveModal() {
 
       var modalInstance = $modal.open({
-        template: '<div class="modal-header">
-          <h3 class="modal-title">Give your query a name...</h3>
-        </div>
-        <div class="modal-body">
-          <input type="text" class="form-control" ng-model="ctrl.queryName"></input>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" ng-click="ctrl.save()">Save</button>
-          <button class="btn btn-warning" ng-click="ctrl.cancel()">Cancel</button>
-        </div>',
+        templateUrl: "js/widgets/saveModal/save-modal.html",
         controller: 'saveModal as ctrl'
       });
 

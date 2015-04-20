@@ -26,29 +26,25 @@ var appDependencies = [
 
 var outputPath = 'dist/';
 var outputFileName = 'ngQuery.js';
-var outputFileNameMin = 'ngQuery.min.js';
 
-gulp.task("bundle", function () {
+gulp.task("bundle-js", function () {
   return gulp.src(appDependencies)
     .pipe($.concat(outputFileName))
     .pipe($.size())
-    .pipe(gulp.dest(outputPath));
+    .pipe(gulp.dest('./build/js/'));
 });
 
-gulp.task("uglify", function () {
-  return gulp.src(appDependencies)
-    .pipe($.uglify())
-    .pipe($.concat(outputFileNameMin))
-    .pipe($.size())
-    .pipe(gulp.dest(outputPath));
-});
-
-gulp.task("minify-css", function () {
-  return gulp.src('./styles/css/*.css')
-    .pipe($.concat('ngQuery.css'))
-    .pipe(minifyCSS({
-      keepBreaks: false
+gulp.task("bundle-templates", function () {
+  return gulp.src('js/**/*.html')
+    .pipe($.angularTemplates({
+      basePath: 'js/',
+      module: 'ngQuery'
     }))
-    .pipe($.size())
-    .pipe(gulp.dest(outputPath))
+    .pipe(gulp.dest('./build/templates'));
+});
+
+gulp.task('bundle-sass', function () {
+  gulp.src('./styles/**/*.scss')
+    .pipe($.sass())
+    .pipe(gulp.dest('./build/css'));
 });
