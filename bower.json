@@ -4,7 +4,7 @@
   "main": [
     "./dist/ngQuery.js",
     "./dist/ngQuery.min.js",
-    "./dist/ngQuery.min.css",
+    "./dist/ngQuery.min.css"
   ],
   "description": "Component to build queries in angular.",
   "authors": [
