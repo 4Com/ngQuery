@@ -29,7 +29,16 @@
     function openSaveModal () {
 
       var modalInstance = $modal.open({
-        templateUrl: "js/widgets/saveModal/save-modal.html",
+        template: '<div class="modal-header">
+          <h3 class="modal-title">Give your query a name...</h3>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" ng-model="ctrl.queryName"></input>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="ctrl.save()">Save</button>
+          <button class="btn btn-warning" ng-click="ctrl.cancel()">Cancel</button>
+        </div>',
         controller: 'saveModal as ctrl'
       });
 
