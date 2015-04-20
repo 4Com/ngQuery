@@ -5,7 +5,7 @@ $saved-query-background: #FFFFFF;
 $saved-query-header: #1D2EB2;
 
 .query-container {
-  margin: 10px 0px 0px 0px; /* TODO: Let the consumer do this */
+  margin: 0px 0px 0px 0px; /* TODO: Let the consumer do this */
 
   .panel-body{
     background-color: $query-background;
