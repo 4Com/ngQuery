@@ -18,7 +18,6 @@ src/app/**/*.js
 src/app/**/*.js.map
 
 bower_components/
-dist/
 build/
 app/bundle.js
 app/vendor.js

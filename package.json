@@ -2,7 +2,7 @@
   "name": "ngQuery",
   "version": "0.0.1",
   "description": "Component to build queries in angular.",
-  "main": "../js/ngQuery.js",
+  "main": "./dist/ngQuery.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

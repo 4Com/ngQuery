@@ -11,7 +11,9 @@ var $ = require('gulp-load-plugins')();
 var distributionFiles = [
   './build/js/ngQuery.js',
   './build/js/ngQuery.min.js',
-  './build/css/ngQuery.min.css'
+  './build/css/ngQuery.min.css',
+  './LICENSE.md',
+  './README.md'
 ];
 
 gulp.task("dist", ['uglify'], function () {
