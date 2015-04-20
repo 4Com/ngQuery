@@ -1,6 +1,7 @@
 {
   "name": "ngQuery",
   "version": "0.0.1",
+  "main": "./dist/ngQuery.js",
   "description": "Component to build queries in angular.",
   "authors": [
     "Ben Gale <ben.gale@4com.co.uk>"
