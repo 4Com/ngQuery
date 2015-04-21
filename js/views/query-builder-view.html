@@ -7,18 +7,26 @@
     <button type="button" class="btn btn-success" ng-disabled="ctrl.groups.list.length === undefined || ctrl.groups.list.length === 0" ng-click="onExecute({data: ctrl.groups})">Exectute Query</button>
   </div>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-3" ng-controller="SavedQueriesController as ctrl">
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Saved Queries</h3>
     </div>
     <div class="panel-body">
       <span ng-if="ctrl.savedQueries.length == 0">Nothing Saved.</span>
+
       <div ng-repeat="save in ctrl.savedQueries">
-        <button type="button" class="btn btn-default btn-sm btn-block saved-query" ng-click="ctrl.restoreQuery(save.query)">
-          {{ save.name }}
-        </button>
+
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-default btn-sm saved-query" ng-click="ctrl.restoreQuery(save.query)">
+            {{ save.name }}
+          </button>
+          <button type="button" class="btn btn-danger btn-sm pull-right" ng-click="ctrl.removeQuery(save)">
+            <i class="glyphicon glyphicon-trash"></i>
+          </button>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

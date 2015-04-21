@@ -11,7 +11,6 @@
 
     vm.queryOptions = queryOptions.getOptions();
     vm.groups = {};
-    vm.savedQueries = queryRepository.getQueries();
 
     vm.clearQuery = function () {
       vm.groups.list.length = 0;
@@ -34,7 +33,11 @@
       });
 
       modalInstance.result.then(function (name) {
-        queryRepository.storeQuery(name, angular.copy(vm.groups));
+        if (name.length > 30 || name.length < 1) {
+          alert("Invalid name!");
+        } else {
+          queryRepository.storeQuery(name, angular.copy(vm.groups));
+        }
       }, function () {
 
       });

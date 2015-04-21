@@ -7,7 +7,8 @@
   function queryRepository() {
     var service = {
       getQueries: getQueries,
-      storeQuery: storeQuery
+      storeQuery: storeQuery,
+      removeQuery: removeQuery
     };
 
     return service;
@@ -27,6 +28,11 @@
       name: name,
       query: query
     });
+  }
+
+  function removeQuery(query) {
+    var index = queries.indexOf(query);
+    queries.splice(index, 1);
   }
 
 })();

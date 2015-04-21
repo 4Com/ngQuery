@@ -16,6 +16,7 @@ var appDependencies = [
   'js/ngQueryConfig.js',
   'js/directives/queryBuilderDirective.js',
   'js/controllers/queryBuilderController.js',
+  'js/controllers/savedQueriesController.js',
   'js/directives/ruleDirective/ruleDirective.js',
   'js/directives/ruleDirective/ruleDirectiveController.js',
   'js/directives/ruleGroupDirective/ruleGroupDirectiveController.js',
