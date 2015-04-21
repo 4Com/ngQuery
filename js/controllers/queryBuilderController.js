@@ -25,6 +25,10 @@
       angular.copy(query, vm.groups);
     };
 
+    vm.savedQueries = queryRepository.getQueries();
+
+    vm.removeQuery = queryRepository.removeQuery;
+
     function openSaveModal() {
 
       var modalInstance = $modal.open({
