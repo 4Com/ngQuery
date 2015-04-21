@@ -9,7 +9,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task("uglify", ['bundle-js', 'bundle-templates'], function () {
-  return gulp.src('./build/**/*.js')
+  return gulp.src('./build/js/app/**/*.js')
     .pipe($.uglify())
     .pipe($.concat('ngQuery.min.js'))
     .pipe($.size())

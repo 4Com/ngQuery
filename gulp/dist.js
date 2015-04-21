@@ -12,12 +12,23 @@ var distributionFiles = [
   './build/js/ngQuery.js',
   './build/js/ngQuery.min.js',
   './build/css/ngQuery.min.css',
+  './build/js/vendor.js',
   './LICENSE.md',
   './README.md'
 ];
 
-gulp.task("dist", ['uglify'], function () {
-  return gulp.src(distributionFiles)
+var sampleFiles = [
+  './dist/ngQuery.min.js',
+  './dist/ngQuery.min.css',
+  './dist/vendor.js'
+];
+
+gulp.task("dist", ['uglify', 'vendor'], function () {
+  gulp.src(distributionFiles)
     .pipe($.size())
     .pipe(gulp.dest('./dist/'));
+
+  gulp.src(distributionFiles)
+    .pipe($.size())
+    .pipe(gulp.dest('./dist/sample/'));
 });

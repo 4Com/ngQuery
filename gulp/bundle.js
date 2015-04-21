@@ -31,7 +31,7 @@ gulp.task("bundle-js", function () {
   return gulp.src(appDependencies)
     .pipe($.concat(outputFileName))
     .pipe($.size())
-    .pipe(gulp.dest('./build/js/'));
+    .pipe(gulp.dest('./build/js/app/'));
 });
 
 gulp.task("bundle-templates", function () {
@@ -40,7 +40,7 @@ gulp.task("bundle-templates", function () {
       basePath: 'js/',
       module: 'ngQuery'
     }))
-    .pipe(gulp.dest('./build/templates'));
+    .pipe(gulp.dest('./build/js/app/templates'));
 });
 
 gulp.task('bundle-sass', function () {
