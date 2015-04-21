@@ -1,10 +1,10 @@
-(function() {
+(function () {
   "use strict";
 
   angular.module("ngQuery")
-         .controller("ruleGroupDirectiveController", RuleGroupDirectiveController);
+    .controller("ruleGroupDirectiveController", RuleGroupDirectiveController);
 
-  RuleGroupDirectiveController.$inject = [ "$scope" ];
+  RuleGroupDirectiveController.$inject = ["$scope"];
 
   function RuleGroupDirectiveController($scope) {
     var vm = this;
@@ -14,29 +14,37 @@
     vm.onRemove = $scope.onRemove;
     vm.isNested = $scope.isNested;
 
-    vm.selectedTopLevelOperator = vm.queryOptions.topLevelOperators[0].name;
+    vm.rules.selectedTopLevelOperator = vm.rules.selectedTopLevelOperator || vm.queryOptions.topLevelOperators[0].name;
 
-    vm.setTopLevelOperator = function(op) {
-      vm.selectedTopLevelOperator = op;
+    vm.setTopLevelOperator = function (op) {
+      vm.rules.selectedTopLevelOperator = op;
     };
 
-    vm.addRule = function() {
-      vm.rules.push({});
+    vm.addRule = function () {
+      if (vm.rules.list === undefined) {
+        vm.rules.list = [];
+      }
+      vm.rules.list.push({});
     };
 
-    vm.removeRule = function(rule) {
-      var index = vm.rules.indexOf(rule);
-      vm.rules.splice(index, 1);
+    vm.removeRule = function (rule) {
+      var index = vm.rules.list.indexOf(rule);
+      vm.rules.list.splice(index, 1);
     };
 
-    vm.addGroup = function() {
-      vm.rules.push([{}]);
+    vm.addGroup = function () {
+      if (vm.rules.list === undefined) {
+        vm.rules.list = [];
+      }
+      vm.rules.list.push({
+        list: []
+      });
     };
 
-    vm.removeGroup = function(group) {
-      if(group) {
-        var index = vm.rules.indexOf(group);
-        vm.rules.splice(index, 1);
+    vm.removeGroup = function (group) {
+      if (group) {
+        var index = vm.rules.list.indexOf(group);
+        vm.rules.list.splice(index, 1);
       }
     };
   }

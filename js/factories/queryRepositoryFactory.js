@@ -22,6 +22,7 @@
   }
 
   function storeQuery(name, query) {
+    console.log(query);
     queries.push({
       name: name,
       query: query

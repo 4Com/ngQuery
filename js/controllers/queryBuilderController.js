@@ -10,11 +10,11 @@
     var vm = this;
 
     vm.queryOptions = queryOptions.getOptions();
-    vm.groups = [];
+    vm.groups = {};
     vm.savedQueries = queryRepository.getQueries();
 
     vm.clearQuery = function () {
-      vm.groups.length = 0;
+      vm.groups.list.length = 0;
     };
 
     vm.saveQuery = function () {
@@ -22,7 +22,7 @@
     };
 
     vm.restoreQuery = function (query) {
-      vm.groups.length = 0;
+      vm.groups.list.length = 0;
       angular.copy(query, vm.groups);
     };
 
