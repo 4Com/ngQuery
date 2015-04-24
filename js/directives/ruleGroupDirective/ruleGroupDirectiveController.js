@@ -14,7 +14,7 @@
     vm.onRemove = $scope.onRemove;
     vm.isNested = $scope.isNested;
 
-    vm.rules.selectedTopLevelOperator = vm.rules.selectedTopLevelOperator || vm.queryOptions.topLevelOperators[0].name;
+    vm.rules.selectedTopLevelOperator = vm.rules.selectedTopLevelOperator || vm.queryOptions.topLevelOperators[0].systemIdentifier;
 
     vm.setTopLevelOperator = function (op) {
       vm.rules.selectedTopLevelOperator = op;

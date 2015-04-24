@@ -2,8 +2,8 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="btn-group group-conditions" role="group">
-        <label ng-repeat="op in ctrl.queryOptions.topLevelOperators" class="btn btn-xs btn-primary toggle-button" ng-class="{'active': ctrl.rules.selectedTopLevelOperator == op.name }">
-          <input name="{{op.name}}_cond" type="radio" value="{{op.name}}" ng-click="ctrl.setTopLevelOperator(op.name)"> {{ op.name }}
+        <label ng-repeat="op in ctrl.queryOptions.topLevelOperators" class="btn btn-xs btn-primary toggle-button" ng-class="{'active': ctrl.rules.selectedTopLevelOperator == op.systemIdentifier }">
+          <input name="{{op.displayText}}_cond" type="radio" value="{{op.displayText}}" ng-click="ctrl.setTopLevelOperator(op.systemIdentifier)"> {{ op.displayText }}
           </input>
         </label>
       </div>

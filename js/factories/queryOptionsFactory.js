@@ -15,48 +15,206 @@
 
     function getOptions() {
       var queryOptions = {
-        topLevelOperators: [{
-          name: "AND"
-        }, {
-          name: "OR"
-        }],
-        fields: [{
-          identifier: "CFirstName",
-          display: "Contact First Name",
-          type: "text",
-          validOperators: [{
-            identifier: "equals",
-            display: "=="
-          }, {
-            identifier: "notequal",
-            display: "!="
-          }, {
-            identifier: "like",
-            display: "like"
-          }]
-        }, {
-          identifier: "NoHandsets",
-          display: "Number of Handsets",
-          type: "number",
-          validOperators: [{
-            identifier: "equals",
-            display: "=="
-          }, {
-            identifier: "notequal",
-            display: "!="
-          }, {
-            identifier: "greaterthan",
-            display: ">"
-          }],
-          validEntries: [{
-              identifier: 1,
-              display: "1"
-          },
-            {
-              identifier: 2,
-              display: "2"
-          }]
-        }]
+        "topLevelOperators": [
+          {
+            "displayText": "AND",
+            "systemIdentifier": "And"
+    },
+          {
+            "displayText": "OR",
+            "systemIdentifier": "Or"
+    }
+  ],
+        "fields": [
+          {
+            "display": "Property1",
+            "systemIdentifier": "Property1",
+            "type": "text",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    },
+          {
+            "display": "Property2",
+            "systemIdentifier": "Property2",
+            "type": "text",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    },
+          {
+            "display": "Property3",
+            "systemIdentifier": "Property3",
+            "type": "text",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    },
+          {
+            "display": "Property4",
+            "systemIdentifier": "Property4",
+            "type": "numeric",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": ">",
+                "systemIdentifier": "GreaterThan"
+        },
+              {
+                "displayText": ">=",
+                "systemIdentifier": "GreaterThanOrEqualTo"
+        },
+              {
+                "displayText": "<",
+                "systemIdentifier": "LessThan"
+        },
+              {
+                "displayText": "<=",
+                "systemIdentifier": "LessThanOrEqualTo"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    },
+          {
+            "display": "Property5",
+            "systemIdentifier": "Property5",
+            "type": "date",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": ">",
+                "systemIdentifier": "GreaterThan"
+        },
+              {
+                "displayText": ">=",
+                "systemIdentifier": "GreaterThanOrEqualTo"
+        },
+              {
+                "displayText": "<",
+                "systemIdentifier": "LessThan"
+        },
+              {
+                "displayText": "<=",
+                "systemIdentifier": "LessThanOrEqualTo"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    },
+          {
+            "display": "Property6",
+            "systemIdentifier": "Property6",
+            "type": "text",
+            "validEntries": [
+
+      ],
+            "validOperators": [
+              {
+                "displayText": "==",
+                "systemIdentifier": "Equals"
+        },
+              {
+                "displayText": "!=",
+                "systemIdentifier": "NotEquals"
+        },
+              {
+                "displayText": "IN",
+                "systemIdentifier": "In"
+        },
+              {
+                "displayText": "NOT IN",
+                "systemIdentifier": "NotIn"
+        }
+      ]
+    }
+  ]
       };
 
       return queryOptions;

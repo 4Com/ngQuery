@@ -2,9 +2,9 @@
   "use strict";
 
   angular.module("ngQuery")
-         .controller("ruleDirectiveController", RuleDirectiveController);
+    .controller("ruleDirectiveController", RuleDirectiveController);
 
-  RuleDirectiveController.$inject = [ "$scope" ];
+  RuleDirectiveController.$inject = ["$scope"];
 
   function RuleDirectiveController($scope) {
     var vm = this;
@@ -16,11 +16,11 @@
     vm.availableOperators = [];
     vm.validEntries = null;
 
-    vm.setAvailableOperators = function() {
-      for(var i=0; i<vm.queryOptions.fields.length; i++) {
+    vm.setAvailableOperators = function () {
+      for (var i = 0; i < vm.queryOptions.fields.length; i++) {
         var field = vm.queryOptions.fields[i];
 
-        if (field.identifier === vm.model.selectedField) {
+        if (field.systemIdentifier === vm.model.selectedField) {
           vm.availableOperators = field.validOperators;
           vm.validEntries = field.validEntries || null;
           break;
